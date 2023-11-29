@@ -1,0 +1,388 @@
+<style>
+    :root {
+        --main-bg-color: radial-gradient(circle farthest-side at 0% 100%, rgb(47, 47, 47) 0%, rgba(47, 47, 47, 0) 100%), radial-gradient(circle farthest-side at 100% 100%, rgb(63, 63, 63) 0%, rgba(63, 63, 63, 0) 100%), radial-gradient(circle farthest-side at 100% 0%, rgb(76, 76, 76) 0%, rgba(76, 76, 76, 0) 100%), radial-gradient(circle farthest-side at 0% 0%, rgb(58, 58, 58) 0%, rgba(58, 58, 58, 0) 100%), black center center/cover no-repeat fixed;
+        --text: #ddd;
+    }
+
+    body {
+        background: var(--main-bg-color);
+        background-repeat: repeat, no-repeat;
+        background-attachment: fixed, fixed;
+        background-position: center center, center center;
+        background-size: auto, cover;
+        -webkit-background-size: auto, cover;
+        -moz-background-size: auto, cover;
+        -o-background-size: auto, cover;
+        color: var(--text);
+        padding: 1rem;
+    }
+
+    /* Style the buttons that are used to open and close the accordion panel */
+    .accordion {
+        background-color: rgba(0, 0, 0, .3);
+        color: #444;
+        cursor: pointer;
+        padding: 1.5rem;
+        width: 100%;
+        text-align: left;
+        border: none;
+        outline: none;
+        transition: 0.4s;
+        text-transform: uppercase;
+        font-family: "Open Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+        overflow: hidden;
+    }
+
+    /* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+    .active,
+    .accordion:hover {
+        background-color: rgba(0, 0, 0, .3);
+    }
+
+    /* Style the accordion panel. Note: hidden by default */
+    .panel {
+        background-color: rgba(0, 0, 0, .5);
+        display: none;
+        color: #eee;
+        overflow: hidden;
+        text-transform: uppercase;
+        font-family: "Open Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+        width: 100%;
+    }
+
+    .image {
+
+        max-width: 100%;
+        margin: 1rem;
+        display: block;
+
+    }
+
+    .title-font-small {
+        font-size: 15px;
+        font-weight: 700;
+        text-transform: uppercase;
+        font-family: "Open Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+        display: block;
+        margin: 1.5rem;
+    }
+
+    ol.title-font-small {
+        margin: 0;
+    }
+
+    .title-font-medium {
+        font-size: 20px;
+        font-weight: 700;
+        text-transform: uppercase;
+        font-family: "Open Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+        display: block;
+    }
+
+    .title-font-big {
+        font-size: 30px;
+        font-weight: 700;
+        text-transform: uppercase;
+        font-family: "Open Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+        display: block;
+    }
+</style>
+
+<body>
+
+    <div>
+        <img src="custom_html/images/logo/plexasaurus_transparent.png"
+            style="display: block;margin-left: auto;margin-right: auto;max-width: 100%;">
+    </div>
+    <br><br>
+
+    <div style="text-align: center">
+        <font color="#eee">
+            <h1 class="title-font-big">Plex Settings</h1>
+            <h2 class="title-font-medium">Please change these plex settings for optimal stream quality</h2>
+        </font>
+
+        <br><br>
+
+    </div>
+
+    <div>
+        <font color="#eee">
+            <h3 class="title-font-medium" style="text-align: center;">Accepting Plex Invites</h3>
+        </font>
+        <button class="accordion">
+            <font color="#eee">
+                <b>Accepting a Plex Invite</b>
+            </font>
+        </button>
+
+        <div class="panel">
+            <font color="#eee">
+                <div class="container pl-5 pt-4 container--fluid grid-list-xl">
+                    <div class="layout row">
+                        <!---->
+                        <div class="flex page-col-content xs12 lg9 xl10">
+                            <!---->
+                            <!---->
+                            <div class="contents">
+                                <div>
+                                    <h1 id="how-to-accept-invite-and-setup-libraries"
+                                        class="toc-header title-font-medium" style="text-align: center;"><a
+                                            href="#how-to-accept-invite-and-setup-libraries" class="toc-anchor"></a> How
+                                        to Accept Invite and Setup Libraries?</h1>
+                                    <br>
+                                    <ol class="title-font-small">
+                                        <li>Go to <a href="https://plex.tv/" class="is-external-link"
+                                                target="_blank">https://plex.tv</a> and login with your Plex account
+                                            credentials</li>
+                                        <li>Access the Plex Web app by clicking on the Open Plex button</li>
+                                    </ol>
+                                    <figure class="image"><img src="https://mediaclients.wiki/plex_invite/open_plex.png"
+                                            style="display: block;margin-left: auto;margin-right: auto;max-width: 100%;">
+                                    </figure>
+                                    <br>
+                                    <h2 id="decide-if-you-want-to-sync-your-watched-status-if-you-have-access-to-multiple-servers"
+                                        class="title-font-small"><a
+                                            href="#decide-if-you-want-to-sync-your-watched-status-if-you-have-access-to-multiple-servers"
+                                            class="toc-anchor title-font-small"></a> Decide if you want to Sync your
+                                        Watched Status if you have access to Multiple Servers</h2>
+                                    <figure class="image"><img
+                                            src="https://mediaclients.wiki/plex_invite/plexsyncwatched.png"
+                                            style="display: block;margin-left: auto;margin-right: auto;max-width: 100%;">
+                                    </figure>
+                                    <br>
+                                    <h2 id="open-settings-by-clicking-on-the-wrench-icon-in-the-top-right"
+                                        class="toc-header title-font-small"><a
+                                            href="#open-settings-by-clicking-on-the-wrench-icon-in-the-top-right"
+                                            class="toc-anchor title-font-small"></a> Open Settings by clicking on the
+                                        wrench icon in the top right</h2>
+                                    <figure class="image"><img
+                                            src="https://mediaclients.wiki/plex_invite/plexsettings.png"
+                                            style="display: block;margin-left: auto;margin-right: auto;max-width: 100%;">
+                                    </figure>
+                                    <br>
+                                    <ol class="title-font-small">
+                                        <li>Select <i>Manage Library Access</i></li>
+                                        <li>Find the Invitation received section and click the Checkmark after verifying
+                                            the server is in fact the one you were expecting to see an invitation from
+                                        </li>
+                                        <li>Click the Home Icon to go to the Home Screen of Plex</li>
+                                    </ol>
+                                    <figure class="image"><img
+                                            src="https://mediaclients.wiki/plex_invite/invitelocation.png"
+                                            style="display: block;margin-left: auto;margin-right: auto;max-width: 100%;">
+                                    </figure>
+                                    <br>
+                                </div>
+                            </div>
+                            <!---->
+                        </div>
+                    </div>
+                </div>
+
+            </font>
+
+        </div>
+
+        <br><br>
+
+        <div>
+            <font color="#eee">
+                <h3 class="title-font-medium" style="text-align: center;">Plex Libraries</h3>
+            </font>
+            <button class="accordion">
+                <font color="#eee">
+                    <b>Reordering Plex Libraries</b>
+                </font>
+            </button>
+
+            <div class="panel">
+                <font color="#eee">
+                    <div class="container pl-5 pt-4 container--fluid grid-list-xl">
+                        <div class="layout row">
+                            <!---->
+                            <div class="flex page-col-content xs12 lg9 xl10">
+                                <!---->
+                                <!---->
+                                <div class="contents">
+                                    <div>
+                                        <br>
+                                        <ol class="title-font-small">
+                                            <li>Plex has their own libraries and content, while it's a nice bonus it is
+                                                easy to confuse a Plex Library with a custom curated one that has been
+                                                shared to you</li>
+                                            <li>Find the hidden Ellipse next to the item you wish to <i>Unpin</i>. (I
+                                                remove all Plex's items seen in the screenshot)&nbsp;</li>
+                                        </ol>
+                                        <figure class="image"><img
+                                                src="https://mediaclients.wiki/plex_invite/unpinbadplex.png"
+                                                style="display: block;margin-left: auto;margin-right: auto;max-width: 100%;">
+                                        </figure>
+                                        <br>
+                                        <p class="title-font-small">Click on the <i>MORE </i>button to find the server
+                                            that was shared with you<br></p>
+                                        <figure class="image"><img
+                                                src="https://mediaclients.wiki/plex_invite/moreplex.png"
+                                                style="display: block;margin-left: auto;margin-right: auto;max-width: 100%;">
+                                        </figure>
+                                        <br>
+                                        <p class="title-font-small">Please note that the server name can be different
+                                            depending on which server you were added - In this case the server name is
+                                            Plexasaurus<br></p>
+                                        <ol class="title-font-small">
+                                            <li>Locate a desired library of interest that is shared with you</li>
+                                            <li>Click the Ellipse and <i>Pin</i> the desired library (Repeat this for
+                                                all libraries of interest)&nbsp;</li>
+                                        </ol>
+                                        <figure class="image"><img
+                                                src="https://mediaclients.wiki/plex_invite/pingoodstuff.png"
+                                                style="display: block;margin-left: auto;margin-right: auto;max-width: 100%;">
+                                        </figure>
+                                        <br>
+                                        <p class="title-font-small">In the upper left, click the <i>PINNED </i>menu item
+                                            to return to the Home section of Plex</p>
+                                        <figure class="image"><img
+                                                src="https://mediaclients.wiki/plex_invite/backhome.png"
+                                                style="display: block;margin-left: auto;margin-right: auto;max-width: 100%;">
+                                        </figure>
+                                        <br>
+                                        <p class="title-font-small">You should see your pinned libraries listed on the
+                                            home page, you can also reorder them as you see fit.<br></p>
+                                        <figure class="image"><img src="https://mediaclients.wiki/plex_invite/enjoy.png"
+                                                style="display: block;margin-left: auto;margin-right: auto;max-width: 100%;">
+                                        </figure>
+                                        <br>
+                                        <ol class="title-font-small">
+                                            <li>Locate a desired library you wish to move</li>
+                                            <li>Click the Ellipse and select <i>Reorder</i></li>
+                                        </ol>
+                                        <figure class="image"><img
+                                                src="https://mediaclients.wiki/plex_invite/reorder.png"
+                                                style="display: block;margin-left: auto;margin-right: auto;max-width: 100%;">
+                                        </figure>
+                                        <p class="title-font-small"><br>Now simply Drag and Drop the Libraries as you
+                                            see fit.&nbsp;</p>
+                                        <figure class="image"><img
+                                                src="https://mediaclients.wiki/plex_invite/dragdrop.png"
+                                                style="display: block;margin-left: auto;margin-right: auto;max-width: 100%;">
+                                        </figure>
+                                        <p>&nbsp;</p>
+                                        <p class="title-font-small">Once all your Libraries are in the desired order,
+                                            simply click the tiny “x” found here to exit the Reorder Process. You are
+                                            now ready to enjoy your streaming.&nbsp;</p>
+                                        <figure class="image"><img
+                                                src="https://mediaclients.wiki/plex_invite/unorder.png"
+                                                style="display: block;margin-left: auto;margin-right: auto;max-width: 100%;">
+                                        </figure>
+                                        <p>&nbsp;</p>
+                                    </div>
+                                </div>
+                                <!---->
+                            </div>
+                        </div>
+                    </div>
+
+                </font>
+
+            </div>
+
+            <div>
+
+            </div>
+
+            <br><br>
+
+            <div>
+
+                <font color="#eee">
+                    <h3 class="title-font-medium" style="text-align: center;">Follow these setup guides for your
+                        streaming device</h3>
+                </font>
+
+                <button class="accordion">
+                    <font color="#eee">
+                        <b>Plex Web</b>
+                    </font>
+                </button>
+                <div class="panel">
+                    <figure class="image"><img src="custom_html/images/plex_settings/plex_settings_web.jpg"
+                            style="object-fit: contain; width: 100%;"></figure>
+                </div>
+
+
+                <div class="col-md-12">
+                    <hr class="hidden-xs ml-1">
+                </div>
+
+
+                <button class="accordion">
+                    <font color="#eee">
+                        <b>Android | iOS</b>
+                    </font>
+                </button>
+                <div class="panel">
+                    <figure class="image"><img src="custom_html/images/plex_settings/plex_settings_android_ios.jpg"
+                            style="object-fit: contain; width: 100%;"></figure>
+                </div>
+
+
+                <div class="col-md-12">
+                    <hr class="hidden-xs ml-1">
+                </div>
+
+
+                <button class="accordion">
+                    <font color="#eee">
+                        <b>Big Screen Apps (XBOX | PS | TV Apps)</b>
+                    </font>
+                </button>
+                <div class="panel">
+                    <figure class="image"><img src="custom_html/images/plex_settings/plex_settings_big_screen_tvs.jpg"
+                            style="object-fit: contain; width: 100%;"></figure>
+                </div>
+
+
+                <div class="col-md-12">
+                    <hr class="hidden-xs ml-1">
+                </div>
+
+                <button class="accordion">
+                    <font color="#eee">
+                        <b>tv OS</b>
+                    </font>
+                </button>
+                <div class="panel">
+                    <figure class="image"><img src="custom_html/images/plex_settings/plex_settings_tv_os.jpg"
+                            style="object-fit: contain; width: 100%;"></figure>
+                </div>
+
+
+
+
+
+            </div>
+
+
+</body>
+
+<script>
+
+    var acc = document.getElementsByClassName("accordion");
+    var i;
+
+    for (i = 0; i < acc.length; i++) {
+        acc[i].addEventListener("click", function () {
+            /* Toggle between adding and removing the "active" class,
+            to highlight the button that controls the panel */
+            this.classList.toggle("active");
+
+            /* Toggle between hiding and showing the active panel */
+            var panel = this.nextElementSibling;
+            if (panel.style.display === "block") {
+                panel.style.display = "none";
+            } else {
+                panel.style.display = "block";
+            }
+        });
+    }
+</script>
